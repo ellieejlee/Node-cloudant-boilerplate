@@ -1,0 +1,22 @@
+Well done, you've sent your info.
+<br><br>
+Peter, please make this page pretty! Redirecting is best practise so that if they hit BACK, they won't be hit with "POST REQUIRED" errros.
+
+<br><br>
+<p> You will be redirected to the hompage in <span id="countdowntimer">10</span> Seconds</p>
+
+<script type="text/javascript">
+    var timeleft = 10;
+    var downloadTimer = setInterval(function(){
+    timeleft--;
+    document.getElementById("countdowntimer").textContent = timeleft;
+    if(timeleft <= 0)
+        clearInterval(downloadTimer);
+    },1000);
+
+    function Redirect() 
+    {  
+        window.location="index.html"; 
+    } 
+    setTimeout('Redirect()', 10000);   
+</script>
